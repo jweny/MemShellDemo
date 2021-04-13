@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+        <package name="upload" extends="struts-default">
+            <action name="upload" class="action.UploadAction" method="upload">
+                <result name="success">/success.jsp</result>
+            </action>
+
+            <action name="uploadMore" class="action.UploadMoreAction" method="uploadMore">
+                <result name="success">/success.jsp</result>
+            </action>
+
+            <action name="down" class="action.DownAction" method="down">
+                <result name="success" type="stream">
+                    <!--给Stream的结果类型注入参数-->
+                    <param name="contentType">application/octet-stream</param>
+                    <!--告知客户端 以下载的方式打开-->
+                    <param name="contentDisposition">attachment;filename=2.jpg</param>
+                    <!--给流参数赋值-->
+                    <param name="inputName">inputStream</param>
+                </result>
+            </action>
+        </package>
+</struts>
