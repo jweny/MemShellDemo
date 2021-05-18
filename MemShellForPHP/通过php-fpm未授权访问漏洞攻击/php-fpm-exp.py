@@ -250,6 +250,6 @@ if __name__ == '__main__':
         'PHP_VALUE': 'auto_prepend_file = php://input',
         'PHP_ADMIN_VALUE': 'allow_url_include = On'
     }
-    print(params)
+    print(content)
     response = client.request(params, content)
     print(force_text(response))
