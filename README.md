@@ -28,8 +28,6 @@
 
 可自行根据检测原理设计方案，如想交流技术可添加WX。
 
-<img src="README.assets/wechat.jpeg" alt="wechat" style="zoom:25%;" />
-
 ## 🛠️ todo
 
 - redefine字节增强型（冰蝎内存马）
